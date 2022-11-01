@@ -1,0 +1,15 @@
+.divImageHome {
+    position: relative;
+    height: 470px;
+    overflow: hidden;
+}
+
+.divImageHome .imgHome {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}

@@ -1,0 +1,19 @@
+{
+    "servicos": [
+        {
+            "id": 1,
+            "titulo": "Formatura",
+            "descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eveniet dolores hic pariatur aspernatur architecto dolore minus possimus tenetur! Iure blanditiis quod sequi consequatur atque, necessitatibus officia exercitationem laudantium commodi?"
+        },
+        {
+            "id": 2,
+            "titulo": "Eventos Corporativos",
+            "descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eveniet dolores hic pariatur aspernatur architecto dolore minus possimus tenetur! Iure blanditiis quod sequi consequatur atque, necessitatibus officia exercitationem laudantium commodi?"
+        },
+        {
+            "id": 3,
+            "titulo": "Casamentos",
+            "descricao": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium eveniet dolores hic pariatur aspernatur architecto dolore minus possimus tenetur! Iure blanditiis quod sequi consequatur atque, necessitatibus officia exercitationem laudantium commodi?"
+        }
+    ]
+}
