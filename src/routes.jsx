@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home';
 import { QuemSomos } from './pages/QuemSomos';
 import { Contato } from './pages/Contato';
+import { Servicos } from './pages/Servicos';
 
 const Rotas = () => {
     return(
