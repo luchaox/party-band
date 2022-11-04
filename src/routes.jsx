@@ -19,6 +19,10 @@ const Rotas = () => {
                     path='/contato'
                     element={<Contato />}
                 />
+                <Route 
+                    path='/servicos'
+                    element={<Servicos />}
+                />
             </Routes>
         </BrowserRouter>
     )
