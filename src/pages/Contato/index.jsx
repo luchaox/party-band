@@ -1,10 +1,16 @@
 import { Menu } from "../../components/Menu"
 import { Footer } from "../../components/Footer"
 import { useRef } from "react";
+import { useState } from "react";
+import { Toast } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export const Contato = () => {
 
+    const navigate = useNavigate()
     const refForm = useRef();
+    const [showToast, setShowToast] = useState(false);
 
     function submitForm(e) {
         e.preventDefault();
@@ -25,6 +31,25 @@ export const Contato = () => {
 
             console.log(obj)
 
+            axios.post('http://localhost:3001/contatos', obj).then((res) => {
+                console.log(res)
+
+                setShowToast(true)
+                refForm.current['nome'].value = ''
+                refForm.current['email'].value = ''
+                refForm.current['descricao'].value = ''
+                refForm.current.classList.remove('was-validated') 
+
+                setTimeout(() => {
+                    navigate('/listagem')
+                }, 2000);
+                
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+
+
         } else {
             refForm.current.classList.add('was-validated')
         }
@@ -34,6 +59,29 @@ export const Contato = () => {
 
     return (
         <>
+
+            <Toast
+                onClose={() => { setShowToast(false) }}
+                show={showToast}
+                delay={3000}
+                autohide
+                bg={'success'}
+                style={{
+                    position: 'absolute',
+                    zIndex: 3,
+                    right: 0,
+                }}
+            >
+                <Toast.Header>Sucesso!</Toast.Header>
+                <Toast.Body
+                    style={{
+                        color: '#fff'
+                    }}
+                >
+                    {"Email enviado com sucesso!"}
+                </Toast.Body>
+
+            </Toast>
             <Menu paginaAtual={'Contato'} />
             <div 
                 className="container"

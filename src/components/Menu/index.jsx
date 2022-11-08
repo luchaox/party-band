@@ -60,6 +60,17 @@ export const Menu = ({ paginaAtual }) => {
                                     Serviços
                                 </Link>
                             </li>
+                            <li
+                                className="nav-item"
+                            >
+                                <Link
+                                    className={`nav-link ${paginaAtual === 'ListarEmail' && 'active'}`}
+                                    to="/listagem"
+                                >
+                                    Listar Email
+                                </Link>
+
+                            </li>
                         </ul>
                     </div>
                 </div>

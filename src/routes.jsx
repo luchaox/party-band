@@ -3,6 +3,7 @@ import { Home } from './pages/Home';
 import { QuemSomos } from './pages/QuemSomos';
 import { Contato } from './pages/Contato';
 import { Servicos } from './pages/Servicos';
+import { ListarEmail } from './pages/ListarEmail';
 
 const Rotas = () => {
     return(
@@ -23,6 +24,10 @@ const Rotas = () => {
                 <Route 
                     path='/servicos'
                     element={<Servicos />}
+                />
+                <Route 
+                    path='/listagem'
+                    element={<ListarEmail />}
                 />
             </Routes>
         </BrowserRouter>
